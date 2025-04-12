@@ -1,4 +1,4 @@
-module proto-definitions
+module github.com/recktt77/proto-definitions
 
 go 1.23.4
 
