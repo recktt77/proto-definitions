@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package order;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/recktt77/proto-definitions/gen/order";
+
+message OrderedProduct {
+  string product_id = 1;
+  int32 quantity = 2;
+}
+
+message CreateOrderRequest {
+  string user_id = 1;
+  repeated OrderedProduct products = 2;
+  string status = 3;
+}
+
+message CreateOrderResponse {
+  string id = 1;
+  string user_id = 2;
+  repeated OrderedProduct products = 3;
+  string status = 4;
+  google.protobuf.Timestamp created_at = 5;
+}
+
+message UpdateOrderRequest {
+  string id = 1;
+  string status = 2;
+}
+
+message UpdateOrderResponse {
+  string id = 1;
+  string user_id = 2;
+  repeated OrderedProduct products = 3;
+  string status = 4;
+  google.protobuf.Timestamp created_at = 5;
+}
+
+message GetOrderRequest {
+  string id = 1;
+}
+
+message GetOrderResponse {
+  string id = 1;
+  string user_id = 2;
+  repeated OrderedProduct products = 3;
+  string status = 4;
+  google.protobuf.Timestamp created_at = 5;
+}
+
+message ListOrdersRequest {}
+
+message ListOrdersResponse {
+  repeated GetOrderResponse orders = 1;
+}
+
+service OrderService {
+  rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
+  rpc UpdateOrder(UpdateOrderRequest) returns (UpdateOrderResponse);
+  rpc GetOrder(GetOrderRequest) returns (GetOrderResponse);
+  rpc ListOrders(ListOrdersRequest) returns (ListOrdersResponse);
+}
