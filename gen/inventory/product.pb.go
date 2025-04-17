@@ -695,6 +695,270 @@ func (x *DiscountList) GetDiscounts() []*Discount {
 	return nil
 }
 
+type Review struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ProductId     string                 `protobuf:"bytes,2,opt,name=product_id,json=productId,proto3" json:"product_id,omitempty"`
+	UserId        string                 `protobuf:"bytes,3,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Rating        float32                `protobuf:"fixed32,4,opt,name=rating,proto3" json:"rating,omitempty"`
+	Comment       string                 `protobuf:"bytes,5,opt,name=comment,proto3" json:"comment,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *Review) Reset() {
+	*x = Review{}
+	mi := &file_inventory_product_proto_msgTypes[10]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *Review) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Review) ProtoMessage() {}
+
+func (x *Review) ProtoReflect() protoreflect.Message {
+	mi := &file_inventory_product_proto_msgTypes[10]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Review.ProtoReflect.Descriptor instead.
+func (*Review) Descriptor() ([]byte, []int) {
+	return file_inventory_product_proto_rawDescGZIP(), []int{10}
+}
+
+func (x *Review) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *Review) GetProductId() string {
+	if x != nil {
+		return x.ProductId
+	}
+	return ""
+}
+
+func (x *Review) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *Review) GetRating() float32 {
+	if x != nil {
+		return x.Rating
+	}
+	return 0
+}
+
+func (x *Review) GetComment() string {
+	if x != nil {
+		return x.Comment
+	}
+	return ""
+}
+
+type CreateReviewRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	ProductId     string                 `protobuf:"bytes,1,opt,name=product_id,json=productId,proto3" json:"product_id,omitempty"`
+	UserId        string                 `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	Rating        float32                `protobuf:"fixed32,3,opt,name=rating,proto3" json:"rating,omitempty"`
+	Comment       string                 `protobuf:"bytes,4,opt,name=comment,proto3" json:"comment,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *CreateReviewRequest) Reset() {
+	*x = CreateReviewRequest{}
+	mi := &file_inventory_product_proto_msgTypes[11]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *CreateReviewRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CreateReviewRequest) ProtoMessage() {}
+
+func (x *CreateReviewRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_inventory_product_proto_msgTypes[11]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CreateReviewRequest.ProtoReflect.Descriptor instead.
+func (*CreateReviewRequest) Descriptor() ([]byte, []int) {
+	return file_inventory_product_proto_rawDescGZIP(), []int{11}
+}
+
+func (x *CreateReviewRequest) GetProductId() string {
+	if x != nil {
+		return x.ProductId
+	}
+	return ""
+}
+
+func (x *CreateReviewRequest) GetUserId() string {
+	if x != nil {
+		return x.UserId
+	}
+	return ""
+}
+
+func (x *CreateReviewRequest) GetRating() float32 {
+	if x != nil {
+		return x.Rating
+	}
+	return 0
+}
+
+func (x *CreateReviewRequest) GetComment() string {
+	if x != nil {
+		return x.Comment
+	}
+	return ""
+}
+
+type ReviewID struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *ReviewID) Reset() {
+	*x = ReviewID{}
+	mi := &file_inventory_product_proto_msgTypes[12]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *ReviewID) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReviewID) ProtoMessage() {}
+
+func (x *ReviewID) ProtoReflect() protoreflect.Message {
+	mi := &file_inventory_product_proto_msgTypes[12]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReviewID.ProtoReflect.Descriptor instead.
+func (*ReviewID) Descriptor() ([]byte, []int) {
+	return file_inventory_product_proto_rawDescGZIP(), []int{12}
+}
+
+func (x *ReviewID) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+type UpdateReviewRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	ProductId     *string                `protobuf:"bytes,2,opt,name=product_id,json=productId,proto3,oneof" json:"product_id,omitempty"`
+	UserId        *string                `protobuf:"bytes,3,opt,name=user_id,json=userId,proto3,oneof" json:"user_id,omitempty"`
+	Rating        *float32               `protobuf:"fixed32,4,opt,name=rating,proto3,oneof" json:"rating,omitempty"`
+	Comment       *string                `protobuf:"bytes,5,opt,name=comment,proto3,oneof" json:"comment,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *UpdateReviewRequest) Reset() {
+	*x = UpdateReviewRequest{}
+	mi := &file_inventory_product_proto_msgTypes[13]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *UpdateReviewRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UpdateReviewRequest) ProtoMessage() {}
+
+func (x *UpdateReviewRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_inventory_product_proto_msgTypes[13]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UpdateReviewRequest.ProtoReflect.Descriptor instead.
+func (*UpdateReviewRequest) Descriptor() ([]byte, []int) {
+	return file_inventory_product_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *UpdateReviewRequest) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
+}
+
+func (x *UpdateReviewRequest) GetProductId() string {
+	if x != nil && x.ProductId != nil {
+		return *x.ProductId
+	}
+	return ""
+}
+
+func (x *UpdateReviewRequest) GetUserId() string {
+	if x != nil && x.UserId != nil {
+		return *x.UserId
+	}
+	return ""
+}
+
+func (x *UpdateReviewRequest) GetRating() float32 {
+	if x != nil && x.Rating != nil {
+		return *x.Rating
+	}
+	return 0
+}
+
+func (x *UpdateReviewRequest) GetComment() string {
+	if x != nil && x.Comment != nil {
+		return *x.Comment
+	}
+	return ""
+}
+
 var File_inventory_product_proto protoreflect.FileDescriptor
 
 const file_inventory_product_proto_rawDesc = "" +
@@ -760,7 +1024,35 @@ const file_inventory_product_proto_rawDesc = "" +
 	"start_date\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tstartDate\x125\n" +
 	"\bend_date\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\aendDate\"A\n" +
 	"\fDiscountList\x121\n" +
-	"\tdiscounts\x18\x01 \x03(\v2\x13.inventory.DiscountR\tdiscounts2\x9c\x03\n" +
+	"\tdiscounts\x18\x01 \x03(\v2\x13.inventory.DiscountR\tdiscounts\"\x82\x01\n" +
+	"\x06Review\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x1d\n" +
+	"\n" +
+	"product_id\x18\x02 \x01(\tR\tproductId\x12\x17\n" +
+	"\auser_id\x18\x03 \x01(\tR\x06userId\x12\x16\n" +
+	"\x06rating\x18\x04 \x01(\x02R\x06rating\x12\x18\n" +
+	"\acomment\x18\x05 \x01(\tR\acomment\"\x7f\n" +
+	"\x13CreateReviewRequest\x12\x1d\n" +
+	"\n" +
+	"product_id\x18\x01 \x01(\tR\tproductId\x12\x17\n" +
+	"\auser_id\x18\x02 \x01(\tR\x06userId\x12\x16\n" +
+	"\x06rating\x18\x03 \x01(\x02R\x06rating\x12\x18\n" +
+	"\acomment\x18\x04 \x01(\tR\acomment\"\x1a\n" +
+	"\bReviewID\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\"\xd5\x01\n" +
+	"\x13UpdateReviewRequest\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\"\n" +
+	"\n" +
+	"product_id\x18\x02 \x01(\tH\x00R\tproductId\x88\x01\x01\x12\x1c\n" +
+	"\auser_id\x18\x03 \x01(\tH\x01R\x06userId\x88\x01\x01\x12\x1b\n" +
+	"\x06rating\x18\x04 \x01(\x02H\x02R\x06rating\x88\x01\x01\x12\x1d\n" +
+	"\acomment\x18\x05 \x01(\tH\x03R\acomment\x88\x01\x01B\r\n" +
+	"\v_product_idB\n" +
+	"\n" +
+	"\b_user_idB\t\n" +
+	"\a_ratingB\n" +
+	"\n" +
+	"\b_comment2\x9c\x03\n" +
 	"\x0eProductService\x12D\n" +
 	"\rCreateProduct\x12\x1f.inventory.CreateProductRequest\x1a\x12.inventory.Product\x12:\n" +
 	"\x0eGetProductByID\x12\x14.inventory.ProductID\x1a\x12.inventory.Product\x12D\n" +
@@ -772,7 +1064,11 @@ const file_inventory_product_proto_rawDesc = "" +
 	"\x0eCreateDiscount\x12 .inventory.CreateDiscountRequest\x1a\x13.inventory.Discount\x12B\n" +
 	"\x0fGetAllDiscounts\x12\x16.google.protobuf.Empty\x1a\x17.inventory.DiscountList\x12J\n" +
 	"\x18GetProductsWithDiscounts\x12\x16.google.protobuf.Empty\x1a\x16.inventory.ProductList\x12?\n" +
-	"\x0eDeleteDiscount\x12\x15.inventory.DiscountID\x1a\x16.google.protobuf.EmptyBAZ?github.com/recktt77/proto-definitions/gen/inventory;inventorypbb\x06proto3"
+	"\x0eDeleteDiscount\x12\x15.inventory.DiscountID\x1a\x16.google.protobuf.Empty2\xce\x01\n" +
+	"\rReviewService\x12A\n" +
+	"\fCreateReview\x12\x1e.inventory.CreateReviewRequest\x1a\x11.inventory.Review\x127\n" +
+	"\rGetReviewByID\x12\x13.inventory.ReviewID\x1a\x11.inventory.Review\x12A\n" +
+	"\fUpdateReview\x12\x1e.inventory.UpdateReviewRequest\x1a\x11.inventory.ReviewBAZ?github.com/recktt77/proto-definitions/gen/inventory;inventorypbb\x06proto3"
 
 var (
 	file_inventory_product_proto_rawDescOnce sync.Once
@@ -786,7 +1082,7 @@ func file_inventory_product_proto_rawDescGZIP() []byte {
 	return file_inventory_product_proto_rawDescData
 }
 
-var file_inventory_product_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_inventory_product_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
 var file_inventory_product_proto_goTypes = []any{
 	(*Product)(nil),               // 0: inventory.Product
 	(*ProductID)(nil),             // 1: inventory.ProductID
@@ -798,40 +1094,50 @@ var file_inventory_product_proto_goTypes = []any{
 	(*DiscountID)(nil),            // 7: inventory.DiscountID
 	(*CreateDiscountRequest)(nil), // 8: inventory.CreateDiscountRequest
 	(*DiscountList)(nil),          // 9: inventory.DiscountList
-	(*timestamppb.Timestamp)(nil), // 10: google.protobuf.Timestamp
-	(*emptypb.Empty)(nil),         // 11: google.protobuf.Empty
+	(*Review)(nil),                // 10: inventory.Review
+	(*CreateReviewRequest)(nil),   // 11: inventory.CreateReviewRequest
+	(*ReviewID)(nil),              // 12: inventory.ReviewID
+	(*UpdateReviewRequest)(nil),   // 13: inventory.UpdateReviewRequest
+	(*timestamppb.Timestamp)(nil), // 14: google.protobuf.Timestamp
+	(*emptypb.Empty)(nil),         // 15: google.protobuf.Empty
 }
 var file_inventory_product_proto_depIdxs = []int32{
-	10, // 0: inventory.Product.created_at:type_name -> google.protobuf.Timestamp
-	10, // 1: inventory.Product.updated_at:type_name -> google.protobuf.Timestamp
+	14, // 0: inventory.Product.created_at:type_name -> google.protobuf.Timestamp
+	14, // 1: inventory.Product.updated_at:type_name -> google.protobuf.Timestamp
 	0,  // 2: inventory.ProductList.products:type_name -> inventory.Product
-	10, // 3: inventory.Discount.start_date:type_name -> google.protobuf.Timestamp
-	10, // 4: inventory.Discount.end_date:type_name -> google.protobuf.Timestamp
-	10, // 5: inventory.CreateDiscountRequest.start_date:type_name -> google.protobuf.Timestamp
-	10, // 6: inventory.CreateDiscountRequest.end_date:type_name -> google.protobuf.Timestamp
+	14, // 3: inventory.Discount.start_date:type_name -> google.protobuf.Timestamp
+	14, // 4: inventory.Discount.end_date:type_name -> google.protobuf.Timestamp
+	14, // 5: inventory.CreateDiscountRequest.start_date:type_name -> google.protobuf.Timestamp
+	14, // 6: inventory.CreateDiscountRequest.end_date:type_name -> google.protobuf.Timestamp
 	6,  // 7: inventory.DiscountList.discounts:type_name -> inventory.Discount
 	3,  // 8: inventory.ProductService.CreateProduct:input_type -> inventory.CreateProductRequest
 	1,  // 9: inventory.ProductService.GetProductByID:input_type -> inventory.ProductID
 	4,  // 10: inventory.ProductService.UpdateProduct:input_type -> inventory.UpdateProductRequest
 	1,  // 11: inventory.ProductService.DeleteProduct:input_type -> inventory.ProductID
-	11, // 12: inventory.ProductService.GetAllProducts:input_type -> google.protobuf.Empty
+	15, // 12: inventory.ProductService.GetAllProducts:input_type -> google.protobuf.Empty
 	5,  // 13: inventory.ProductService.GetProductsByIDs:input_type -> inventory.ProductIDs
 	8,  // 14: inventory.DiscountService.CreateDiscount:input_type -> inventory.CreateDiscountRequest
-	11, // 15: inventory.DiscountService.GetAllDiscounts:input_type -> google.protobuf.Empty
-	11, // 16: inventory.DiscountService.GetProductsWithDiscounts:input_type -> google.protobuf.Empty
+	15, // 15: inventory.DiscountService.GetAllDiscounts:input_type -> google.protobuf.Empty
+	15, // 16: inventory.DiscountService.GetProductsWithDiscounts:input_type -> google.protobuf.Empty
 	7,  // 17: inventory.DiscountService.DeleteDiscount:input_type -> inventory.DiscountID
-	0,  // 18: inventory.ProductService.CreateProduct:output_type -> inventory.Product
-	0,  // 19: inventory.ProductService.GetProductByID:output_type -> inventory.Product
-	0,  // 20: inventory.ProductService.UpdateProduct:output_type -> inventory.Product
-	11, // 21: inventory.ProductService.DeleteProduct:output_type -> google.protobuf.Empty
-	2,  // 22: inventory.ProductService.GetAllProducts:output_type -> inventory.ProductList
-	2,  // 23: inventory.ProductService.GetProductsByIDs:output_type -> inventory.ProductList
-	6,  // 24: inventory.DiscountService.CreateDiscount:output_type -> inventory.Discount
-	9,  // 25: inventory.DiscountService.GetAllDiscounts:output_type -> inventory.DiscountList
-	2,  // 26: inventory.DiscountService.GetProductsWithDiscounts:output_type -> inventory.ProductList
-	11, // 27: inventory.DiscountService.DeleteDiscount:output_type -> google.protobuf.Empty
-	18, // [18:28] is the sub-list for method output_type
-	8,  // [8:18] is the sub-list for method input_type
+	11, // 18: inventory.ReviewService.CreateReview:input_type -> inventory.CreateReviewRequest
+	12, // 19: inventory.ReviewService.GetReviewByID:input_type -> inventory.ReviewID
+	13, // 20: inventory.ReviewService.UpdateReview:input_type -> inventory.UpdateReviewRequest
+	0,  // 21: inventory.ProductService.CreateProduct:output_type -> inventory.Product
+	0,  // 22: inventory.ProductService.GetProductByID:output_type -> inventory.Product
+	0,  // 23: inventory.ProductService.UpdateProduct:output_type -> inventory.Product
+	15, // 24: inventory.ProductService.DeleteProduct:output_type -> google.protobuf.Empty
+	2,  // 25: inventory.ProductService.GetAllProducts:output_type -> inventory.ProductList
+	2,  // 26: inventory.ProductService.GetProductsByIDs:output_type -> inventory.ProductList
+	6,  // 27: inventory.DiscountService.CreateDiscount:output_type -> inventory.Discount
+	9,  // 28: inventory.DiscountService.GetAllDiscounts:output_type -> inventory.DiscountList
+	2,  // 29: inventory.DiscountService.GetProductsWithDiscounts:output_type -> inventory.ProductList
+	15, // 30: inventory.DiscountService.DeleteDiscount:output_type -> google.protobuf.Empty
+	10, // 31: inventory.ReviewService.CreateReview:output_type -> inventory.Review
+	10, // 32: inventory.ReviewService.GetReviewByID:output_type -> inventory.Review
+	10, // 33: inventory.ReviewService.UpdateReview:output_type -> inventory.Review
+	21, // [21:34] is the sub-list for method output_type
+	8,  // [8:21] is the sub-list for method input_type
 	8,  // [8:8] is the sub-list for extension type_name
 	8,  // [8:8] is the sub-list for extension extendee
 	0,  // [0:8] is the sub-list for field type_name
@@ -843,15 +1149,16 @@ func file_inventory_product_proto_init() {
 		return
 	}
 	file_inventory_product_proto_msgTypes[4].OneofWrappers = []any{}
+	file_inventory_product_proto_msgTypes[13].OneofWrappers = []any{}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_inventory_product_proto_rawDesc), len(file_inventory_product_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   10,
+			NumMessages:   14,
 			NumExtensions: 0,
-			NumServices:   2,
+			NumServices:   3,
 		},
 		GoTypes:           file_inventory_product_proto_goTypes,
 		DependencyIndexes: file_inventory_product_proto_depIdxs,
