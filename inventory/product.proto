@@ -5,7 +5,7 @@ package inventory;
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
 
-option go_package = "github.com/recktt77/proto-definitions/gen/inventory;inventorypb";
+option go_package = "github.com/recktt77/proto-definitions/gen/inventory";
 
 
 message Product {

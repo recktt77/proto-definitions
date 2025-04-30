@@ -4,7 +4,7 @@
 // 	protoc        v6.30.2
 // source: inventory/product.proto
 
-package inventorypb
+package inventory
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -1068,7 +1068,7 @@ const file_inventory_product_proto_rawDesc = "" +
 	"\rReviewService\x12A\n" +
 	"\fCreateReview\x12\x1e.inventory.CreateReviewRequest\x1a\x11.inventory.Review\x127\n" +
 	"\rGetReviewByID\x12\x13.inventory.ReviewID\x1a\x11.inventory.Review\x12A\n" +
-	"\fUpdateReview\x12\x1e.inventory.UpdateReviewRequest\x1a\x11.inventory.ReviewBAZ?github.com/recktt77/proto-definitions/gen/inventory;inventorypbb\x06proto3"
+	"\fUpdateReview\x12\x1e.inventory.UpdateReviewRequest\x1a\x11.inventory.ReviewB5Z3github.com/recktt77/proto-definitions/gen/inventoryb\x06proto3"
 
 var (
 	file_inventory_product_proto_rawDescOnce sync.Once
