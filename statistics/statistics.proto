@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package statistics;
+
+option go_package = "github.com/recktt77/proto-definitions/gen/statistics";
+
+message Empty {}
+
+message GetStatisticsResponse {
+  map<string, ActionCount> stats = 1;
+}
+
+message ActionCount {
+  map<string, int32> actions = 1;
+}
+
+service StatisticsService {
+  rpc GetStatistics(Empty) returns (GetStatisticsResponse);
+}
